@@ -11,8 +11,13 @@ This website contains the UFO files for the phenomenological models used in the 
 # Parameters
 Give a list of the parameters and description
 
+## Common to all models
+
  - $\eta$: mass ratio
  - others...
+
+## Differences
+ - Which UFO file is which
 
 # Instructions
 This will show how to use the
