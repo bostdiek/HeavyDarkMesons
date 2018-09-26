@@ -12,12 +12,16 @@ Please note that at this point, the website is still under construction. The mod
 This website contains the UFO files for the phenomenological models used in the above paper to study collider constraints on Heavy Dark Mesons.
 
 # Parameters
-There are a few different parameters that are common or different between the models. For a phenomenological study, the user should only need to alter the following:
+There are a few different parameters that are common  between the models. For a phenomenological study, the user should only need to alter the following:
   - mpi (PionMass): mass of the dark pion.
   - ƞ (FermionEta): mass ratio of dark pions to dark rho. We use benchmark values of 0.25, 0.45, and 0.55.
  - $N_D$ (NDark): the number of dark colors. The benchmark value is 4.
 
- For now, the differences between the models should be viewed as hard coded, and should not be changed.
+For now, the differences between the models should be viewed as hard coded, and should not be changed. In the gaugephobic models, these are specific to the Stealth Dark Matter scenario:
+ - FermionA: mass difference between different triplets of dark pions
+ - FermionY: average Yukawa coupling for dark fermion flavors
+ - FermionEpsilon: difference in Yukawa coupling between dark matter flavors 
+
 
 # Particles
 Each of the models contains a triplet pion (charged and neutral). Only the models with mixing with the SU(2) gauge bosons have a charged rho coded in. The SU(2)R model only has a neutral rho in the UFO files.
@@ -28,10 +32,10 @@ Each of the models contains a triplet pion (charged and neutral). Only the model
  - Neutral pion (dp0): 9000008
 
 ## SU(2)R models
- - Charged rho (rho+): 9000006
+ <!-- - Charged rho (rho+): 9000006 -->
  - Neutral rho (rho0): 9000005
- - Charged pion (dp+): 9000007
- - Neutral pion (dp0): 9000008
+ - Charged pion (dp+): 9000006
+ - Neutral pion (dp0): 9000007
 
 
 
@@ -51,6 +55,6 @@ set PionMass 400
 set FermionEta 0.45
 set NDark 4
 update dependent
-compute_widths 9000007 9000008 --body_decay=2
-compute_widths 9000006 9000005 --body_decay=3
+compute_widths rho0 rho+ --body_decay=2
+compute_widths dp0 dp+ --body_decay=3
 ```
