@@ -1,5 +1,5 @@
 # Heavy Dark Mesons
-[https://arxiv.org/abs/18XX.XXXXX](https://arxiv.org/abs/18XX.XXXXX)
+[https://arxiv.org/abs/1809.10184](https://arxiv.org/abs/1809.10184)
 
  - Graham D. Kribs
  - Adam Martin
@@ -20,7 +20,7 @@ There are a few different parameters that are common  between the models. For a 
 For now, the differences between the models should be viewed as hard coded, and should not be changed. In the gaugephobic models, these are specific to the Stealth Dark Matter scenario:
  - FermionA: mass difference between different triplets of dark pions
  - FermionY: average Yukawa coupling for dark fermion flavors
- - FermionEpsilon: difference in Yukawa coupling between dark matter flavors 
+ - FermionEpsilon: difference in Yukawa coupling between dark matter flavors
 
 
 # Particles
