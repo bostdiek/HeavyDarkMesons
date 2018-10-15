@@ -96,9 +96,8 @@ Block FRBlock
     1 4.000000e+00 # NDark 
     2 1.500000e+02 # PionMass 
     3 4.500000e-01 # FermionEta 
-    4 1.000000e-01 # FermionA 
-    5 1.000000e-01 # FermionEpsilon 
-    6 3.000000e-03 # FermionY 
+    4 1.000000e+04 # VPi 
+    5 1.000000e-01 # Xi 
 
 ###################################
 ## INFORMATION FOR YUKAWA

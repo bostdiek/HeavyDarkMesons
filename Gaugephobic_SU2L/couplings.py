@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.24
 # Mathematica version: 10.3.0 for Mac OS X x86 (64-bit) (October 9, 2015)
-# Date: Wed 26 Sep 2018 10:56:44
+# Date: Mon 15 Oct 2018 09:37:13
 
 
 from object_library import all_couplings, Coupling
@@ -226,590 +226,558 @@ GC_54 = Coupling(name = 'GC_54',
                  order = {'NP':1})
 
 GC_55 = Coupling(name = 'GC_55',
-                 value = '(2*FermionEpsilon*FermionY**2*Me)/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_56 = Coupling(name = 'GC_56',
-                 value = '(2*FermionEpsilon*FermionY**2*complex(0,1)*Me*cmath.sqrt(2))/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_57 = Coupling(name = 'GC_57',
-                 value = '(2*FermionEpsilon*FermionY**2*MMU)/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_58 = Coupling(name = 'GC_58',
-                 value = '(2*FermionEpsilon*FermionY**2*complex(0,1)*MMU*cmath.sqrt(2))/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_59 = Coupling(name = 'GC_59',
-                 value = '(2*FermionEpsilon*FermionY**2*msbarDownQuark1)/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_60 = Coupling(name = 'GC_60',
-                 value = '(2*FermionEpsilon*FermionY**2*complex(0,1)*msbarDownQuark1*cmath.sqrt(2))/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_61 = Coupling(name = 'GC_61',
-                 value = '(2*FermionEpsilon*FermionY**2*msbarDownQuark2)/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_62 = Coupling(name = 'GC_62',
-                 value = '(2*FermionEpsilon*FermionY**2*complex(0,1)*msbarDownQuark2*cmath.sqrt(2))/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_63 = Coupling(name = 'GC_63',
-                 value = '(2*FermionEpsilon*FermionY**2*msbarDownQuark3)/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_64 = Coupling(name = 'GC_64',
-                 value = '(2*FermionEpsilon*FermionY**2*complex(0,1)*msbarDownQuark3*cmath.sqrt(2))/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_65 = Coupling(name = 'GC_65',
-                 value = '(-2*FermionEpsilon*FermionY**2*msbarUpQuark1)/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_66 = Coupling(name = 'GC_66',
-                 value = '(-2*FermionEpsilon*FermionY**2*complex(0,1)*msbarUpQuark1*cmath.sqrt(2))/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_67 = Coupling(name = 'GC_67',
-                 value = '(-2*FermionEpsilon*FermionY**2*msbarUpQuark2)/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_68 = Coupling(name = 'GC_68',
-                 value = '(-2*FermionEpsilon*FermionY**2*complex(0,1)*msbarUpQuark2*cmath.sqrt(2))/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_69 = Coupling(name = 'GC_69',
-                 value = '(-2*FermionEpsilon*FermionY**2*msbarUpQuark3)/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_70 = Coupling(name = 'GC_70',
-                 value = '(-2*FermionEpsilon*FermionY**2*complex(0,1)*msbarUpQuark3*cmath.sqrt(2))/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_71 = Coupling(name = 'GC_71',
-                 value = '(2*FermionEpsilon*FermionY**2*MTA)/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_72 = Coupling(name = 'GC_72',
-                 value = '(2*FermionEpsilon*FermionY**2*complex(0,1)*MTA*cmath.sqrt(2))/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
-                 order = {'QED':3})
-
-GC_73 = Coupling(name = 'GC_73',
                  value = '(ee**2*complex(0,1))/(2.*sw**2)',
                  order = {'QED':2})
 
-GC_74 = Coupling(name = 'GC_74',
+GC_56 = Coupling(name = 'GC_56',
                  value = '-((ee**2*complex(0,1))/sw**2)',
                  order = {'QED':2})
 
-GC_75 = Coupling(name = 'GC_75',
+GC_57 = Coupling(name = 'GC_57',
                  value = '(12*ee**2*complex(0,1))/sw**2',
                  order = {'QED':2})
 
-GC_76 = Coupling(name = 'GC_76',
+GC_58 = Coupling(name = 'GC_58',
                  value = '(cw**2*ee**2*complex(0,1))/sw**2',
                  order = {'QED':2})
 
-GC_77 = Coupling(name = 'GC_77',
+GC_59 = Coupling(name = 'GC_59',
                  value = '(12*cw**2*ee**2*complex(0,1))/sw**2',
                  order = {'QED':2})
 
-GC_78 = Coupling(name = 'GC_78',
+GC_60 = Coupling(name = 'GC_60',
                  value = '-(ee**2*complex(0,1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                  order = {'QED':2})
 
-GC_79 = Coupling(name = 'GC_79',
+GC_61 = Coupling(name = 'GC_61',
                  value = '(ee**2*complex(0,1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                  order = {'QED':2})
 
-GC_80 = Coupling(name = 'GC_80',
+GC_62 = Coupling(name = 'GC_62',
                  value = '(ee**2*complex(0,1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                  order = {'QED':2})
 
-GC_81 = Coupling(name = 'GC_81',
+GC_63 = Coupling(name = 'GC_63',
                  value = '(CKM1x1*ee**2*complex(0,1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                  order = {'QED':2})
 
-GC_82 = Coupling(name = 'GC_82',
+GC_64 = Coupling(name = 'GC_64',
                  value = '(CKM1x2*ee**2*complex(0,1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                  order = {'QED':2})
 
-GC_83 = Coupling(name = 'GC_83',
+GC_65 = Coupling(name = 'GC_65',
                  value = '(CKM1x3*ee**2*complex(0,1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                  order = {'QED':2})
 
-GC_84 = Coupling(name = 'GC_84',
+GC_66 = Coupling(name = 'GC_66',
                  value = '(CKM2x1*ee**2*complex(0,1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                  order = {'QED':2})
 
-GC_85 = Coupling(name = 'GC_85',
+GC_67 = Coupling(name = 'GC_67',
                  value = '(CKM2x2*ee**2*complex(0,1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                  order = {'QED':2})
 
-GC_86 = Coupling(name = 'GC_86',
+GC_68 = Coupling(name = 'GC_68',
                  value = '(CKM2x3*ee**2*complex(0,1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                  order = {'QED':2})
 
-GC_87 = Coupling(name = 'GC_87',
+GC_69 = Coupling(name = 'GC_69',
                  value = '(CKM3x1*ee**2*complex(0,1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                  order = {'QED':2})
 
-GC_88 = Coupling(name = 'GC_88',
+GC_70 = Coupling(name = 'GC_70',
                  value = '(CKM3x2*ee**2*complex(0,1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                  order = {'QED':2})
 
-GC_89 = Coupling(name = 'GC_89',
+GC_71 = Coupling(name = 'GC_71',
                  value = '(CKM3x3*ee**2*complex(0,1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                  order = {'QED':2})
 
-GC_90 = Coupling(name = 'GC_90',
+GC_72 = Coupling(name = 'GC_72',
                  value = '-ee/(2.*sw)',
                  order = {'QED':1})
 
-GC_91 = Coupling(name = 'GC_91',
+GC_73 = Coupling(name = 'GC_73',
                  value = '-(ee*complex(0,1))/(2.*sw)',
                  order = {'QED':1})
 
-GC_92 = Coupling(name = 'GC_92',
+GC_74 = Coupling(name = 'GC_74',
                  value = '(ee*complex(0,1))/(2.*sw)',
                  order = {'QED':1})
 
-GC_93 = Coupling(name = 'GC_93',
+GC_75 = Coupling(name = 'GC_75',
                  value = '-((ee*complex(0,1))/sw)',
                  order = {'QED':1})
 
-GC_94 = Coupling(name = 'GC_94',
+GC_76 = Coupling(name = 'GC_76',
                  value = '(ee*complex(0,1))/sw',
                  order = {'QED':1})
 
-GC_95 = Coupling(name = 'GC_95',
+GC_77 = Coupling(name = 'GC_77',
                  value = '(ee*complex(0,1))/(sw*cmath.sqrt(2))',
                  order = {'QED':1})
 
-GC_96 = Coupling(name = 'GC_96',
+GC_78 = Coupling(name = 'GC_78',
                  value = '(CKM1x1*ee*complex(0,1))/(sw*cmath.sqrt(2))',
                  order = {'QED':1})
 
-GC_97 = Coupling(name = 'GC_97',
+GC_79 = Coupling(name = 'GC_79',
                  value = '(CKM1x2*ee*complex(0,1))/(sw*cmath.sqrt(2))',
                  order = {'QED':1})
 
-GC_98 = Coupling(name = 'GC_98',
+GC_80 = Coupling(name = 'GC_80',
                  value = '(CKM1x3*ee*complex(0,1))/(sw*cmath.sqrt(2))',
                  order = {'QED':1})
 
-GC_99 = Coupling(name = 'GC_99',
+GC_81 = Coupling(name = 'GC_81',
                  value = '(CKM2x1*ee*complex(0,1))/(sw*cmath.sqrt(2))',
                  order = {'QED':1})
 
+GC_82 = Coupling(name = 'GC_82',
+                 value = '(CKM2x2*ee*complex(0,1))/(sw*cmath.sqrt(2))',
+                 order = {'QED':1})
+
+GC_83 = Coupling(name = 'GC_83',
+                 value = '(CKM2x3*ee*complex(0,1))/(sw*cmath.sqrt(2))',
+                 order = {'QED':1})
+
+GC_84 = Coupling(name = 'GC_84',
+                 value = '(CKM3x1*ee*complex(0,1))/(sw*cmath.sqrt(2))',
+                 order = {'QED':1})
+
+GC_85 = Coupling(name = 'GC_85',
+                 value = '(CKM3x2*ee*complex(0,1))/(sw*cmath.sqrt(2))',
+                 order = {'QED':1})
+
+GC_86 = Coupling(name = 'GC_86',
+                 value = '(CKM3x3*ee*complex(0,1))/(sw*cmath.sqrt(2))',
+                 order = {'QED':1})
+
+GC_87 = Coupling(name = 'GC_87',
+                 value = '-((cw*ee*complex(0,1))/sw)',
+                 order = {'QED':1})
+
+GC_88 = Coupling(name = 'GC_88',
+                 value = '(cw*ee*complex(0,1))/sw',
+                 order = {'QED':1})
+
+GC_89 = Coupling(name = 'GC_89',
+                 value = '-ee**2/(2.*sw)',
+                 order = {'QED':2})
+
+GC_90 = Coupling(name = 'GC_90',
+                 value = '-(ee**2*complex(0,1))/(2.*sw)',
+                 order = {'QED':2})
+
+GC_91 = Coupling(name = 'GC_91',
+                 value = 'ee**2/(2.*sw)',
+                 order = {'QED':2})
+
+GC_92 = Coupling(name = 'GC_92',
+                 value = '(-2*cw*ee**2*complex(0,1))/sw',
+                 order = {'QED':2})
+
+GC_93 = Coupling(name = 'GC_93',
+                 value = '(12*cw*ee**2*complex(0,1))/sw',
+                 order = {'QED':2})
+
+GC_94 = Coupling(name = 'GC_94',
+                 value = '(ee*complex(0,1)*sw)/(3.*cw)',
+                 order = {'QED':1})
+
+GC_95 = Coupling(name = 'GC_95',
+                 value = '(-2*ee*complex(0,1)*sw)/(3.*cw)',
+                 order = {'QED':1})
+
+GC_96 = Coupling(name = 'GC_96',
+                 value = '(ee*complex(0,1)*sw)/cw',
+                 order = {'QED':1})
+
+GC_97 = Coupling(name = 'GC_97',
+                 value = '-(cw*ee)/(2.*sw) - (ee*sw)/(2.*cw)',
+                 order = {'QED':1})
+
+GC_98 = Coupling(name = 'GC_98',
+                 value = '-(cw*ee*complex(0,1))/(2.*sw) - (ee*complex(0,1)*sw)/(6.*cw)',
+                 order = {'QED':1})
+
+GC_99 = Coupling(name = 'GC_99',
+                 value = '(cw*ee*complex(0,1))/(2.*sw) - (ee*complex(0,1)*sw)/(6.*cw)',
+                 order = {'QED':1})
+
 GC_100 = Coupling(name = 'GC_100',
-                  value = '(CKM2x2*ee*complex(0,1))/(sw*cmath.sqrt(2))',
-                  order = {'QED':1})
-
-GC_101 = Coupling(name = 'GC_101',
-                  value = '(CKM2x3*ee*complex(0,1))/(sw*cmath.sqrt(2))',
-                  order = {'QED':1})
-
-GC_102 = Coupling(name = 'GC_102',
-                  value = '(CKM3x1*ee*complex(0,1))/(sw*cmath.sqrt(2))',
-                  order = {'QED':1})
-
-GC_103 = Coupling(name = 'GC_103',
-                  value = '(CKM3x2*ee*complex(0,1))/(sw*cmath.sqrt(2))',
-                  order = {'QED':1})
-
-GC_104 = Coupling(name = 'GC_104',
-                  value = '(CKM3x3*ee*complex(0,1))/(sw*cmath.sqrt(2))',
-                  order = {'QED':1})
-
-GC_105 = Coupling(name = 'GC_105',
-                  value = '-((cw*ee*complex(0,1))/sw)',
-                  order = {'QED':1})
-
-GC_106 = Coupling(name = 'GC_106',
-                  value = '(cw*ee*complex(0,1))/sw',
-                  order = {'QED':1})
-
-GC_107 = Coupling(name = 'GC_107',
-                  value = '-ee**2/(2.*sw)',
-                  order = {'QED':2})
-
-GC_108 = Coupling(name = 'GC_108',
-                  value = '-(ee**2*complex(0,1))/(2.*sw)',
-                  order = {'QED':2})
-
-GC_109 = Coupling(name = 'GC_109',
-                  value = 'ee**2/(2.*sw)',
-                  order = {'QED':2})
-
-GC_110 = Coupling(name = 'GC_110',
-                  value = '(-2*cw*ee**2*complex(0,1))/sw',
-                  order = {'QED':2})
-
-GC_111 = Coupling(name = 'GC_111',
-                  value = '(12*cw*ee**2*complex(0,1))/sw',
-                  order = {'QED':2})
-
-GC_112 = Coupling(name = 'GC_112',
-                  value = '(ee*complex(0,1)*sw)/(3.*cw)',
-                  order = {'QED':1})
-
-GC_113 = Coupling(name = 'GC_113',
-                  value = '(-2*ee*complex(0,1)*sw)/(3.*cw)',
-                  order = {'QED':1})
-
-GC_114 = Coupling(name = 'GC_114',
-                  value = '(ee*complex(0,1)*sw)/cw',
-                  order = {'QED':1})
-
-GC_115 = Coupling(name = 'GC_115',
-                  value = '-(cw*ee)/(2.*sw) - (ee*sw)/(2.*cw)',
-                  order = {'QED':1})
-
-GC_116 = Coupling(name = 'GC_116',
-                  value = '-(cw*ee*complex(0,1))/(2.*sw) - (ee*complex(0,1)*sw)/(6.*cw)',
-                  order = {'QED':1})
-
-GC_117 = Coupling(name = 'GC_117',
-                  value = '(cw*ee*complex(0,1))/(2.*sw) - (ee*complex(0,1)*sw)/(6.*cw)',
-                  order = {'QED':1})
-
-GC_118 = Coupling(name = 'GC_118',
                   value = '-(cw*ee*complex(0,1))/(2.*sw) + (ee*complex(0,1)*sw)/(2.*cw)',
                   order = {'QED':1})
 
-GC_119 = Coupling(name = 'GC_119',
+GC_101 = Coupling(name = 'GC_101',
                   value = '(cw*ee*complex(0,1))/(2.*sw) + (ee*complex(0,1)*sw)/(2.*cw)',
                   order = {'QED':1})
 
-GC_120 = Coupling(name = 'GC_120',
+GC_102 = Coupling(name = 'GC_102',
                   value = '(cw*ee**2*complex(0,1))/sw - (ee**2*complex(0,1)*sw)/cw',
                   order = {'QED':2})
 
-GC_121 = Coupling(name = 'GC_121',
+GC_103 = Coupling(name = 'GC_103',
                   value = '-(ee**2*complex(0,1)) + (cw**2*ee**2*complex(0,1))/(2.*sw**2) + (ee**2*complex(0,1)*sw**2)/(2.*cw**2)',
                   order = {'QED':2})
 
-GC_122 = Coupling(name = 'GC_122',
+GC_104 = Coupling(name = 'GC_104',
                   value = 'ee**2*complex(0,1) + (cw**2*ee**2*complex(0,1))/(2.*sw**2) + (ee**2*complex(0,1)*sw**2)/(2.*cw**2)',
                   order = {'QED':2})
 
-GC_123 = Coupling(name = 'GC_123',
+GC_105 = Coupling(name = 'GC_105',
                   value = '-(ee**2*vev)/(2.*cw)',
                   order = {'QED':1})
 
-GC_124 = Coupling(name = 'GC_124',
+GC_106 = Coupling(name = 'GC_106',
                   value = '(ee**2*vev)/(2.*cw)',
                   order = {'QED':1})
 
-GC_125 = Coupling(name = 'GC_125',
+GC_107 = Coupling(name = 'GC_107',
                   value = '-2*complex(0,1)*lam*vev',
                   order = {'QED':1})
 
-GC_126 = Coupling(name = 'GC_126',
+GC_108 = Coupling(name = 'GC_108',
                   value = '-6*complex(0,1)*lam*vev',
                   order = {'QED':1})
 
-GC_127 = Coupling(name = 'GC_127',
+GC_109 = Coupling(name = 'GC_109',
                   value = '-(ee**2*vev)/(4.*sw**2)',
                   order = {'QED':1})
 
-GC_128 = Coupling(name = 'GC_128',
+GC_110 = Coupling(name = 'GC_110',
                   value = '-(ee**2*complex(0,1)*vev)/(4.*sw**2)',
                   order = {'QED':1})
 
-GC_129 = Coupling(name = 'GC_129',
+GC_111 = Coupling(name = 'GC_111',
                   value = '(ee**2*complex(0,1)*vev)/(2.*sw**2)',
                   order = {'QED':1})
 
-GC_130 = Coupling(name = 'GC_130',
+GC_112 = Coupling(name = 'GC_112',
                   value = '(ee**2*vev)/(4.*sw**2)',
                   order = {'QED':1})
 
-GC_131 = Coupling(name = 'GC_131',
+GC_113 = Coupling(name = 'GC_113',
                   value = '-(ee**2*vev)/(2.*sw)',
                   order = {'QED':1})
 
-GC_132 = Coupling(name = 'GC_132',
+GC_114 = Coupling(name = 'GC_114',
                   value = '(ee**2*vev)/(2.*sw)',
                   order = {'QED':1})
 
-GC_133 = Coupling(name = 'GC_133',
-                  value = '(-2*ee*FermionEpsilon*FermionY**2*MH**2*vev)/(FermionA*(2 + FermionA)**2*FermionEta**3*cmath.pi*PionMass**3*sw)',
-                  order = {'QED':3})
-
-GC_134 = Coupling(name = 'GC_134',
-                  value = '(2*ee*FermionEpsilon*FermionY**2*MH**2*vev)/(FermionA*(2 + FermionA)**2*FermionEta**3*cmath.pi*PionMass**3*sw)',
-                  order = {'QED':3})
-
-GC_135 = Coupling(name = 'GC_135',
-                  value = '(-2*ee*FermionEpsilon*FermionY**2*MH**2*vev)/(cw*FermionA*(2 + FermionA)**2*FermionEta**3*cmath.pi*PionMass**3*sw)',
-                  order = {'QED':3})
-
-GC_136 = Coupling(name = 'GC_136',
-                  value = '(2*ee*FermionEpsilon*FermionY**2*MH**2*vev)/(cw*FermionA*(2 + FermionA)**2*FermionEta**3*cmath.pi*PionMass**3*sw)',
-                  order = {'QED':3})
-
-GC_137 = Coupling(name = 'GC_137',
-                  value = '-(CL*FermionEpsilon*FermionY**2*MH**2*vev)/(2.*FermionA*FermionEta**3*cmath.pi*PionMass**3*cmath.sqrt(NDark)) + (CL*FermionEpsilon*FermionY**2*vev)/(4.*FermionEta**3*cmath.pi*PionMass*cmath.sqrt(NDark)) - (CL*FermionEpsilon*FermionY**2*vev)/(2.*FermionA*FermionEta**3*cmath.pi*PionMass*cmath.sqrt(NDark))',
-                  order = {'NP':1,'QED':2})
-
-GC_138 = Coupling(name = 'GC_138',
-                  value = '(CL*FermionEpsilon*FermionY**2*MH**2*vev)/(2.*FermionA*FermionEta**3*cmath.pi*PionMass**3*cmath.sqrt(NDark)) - (CL*FermionEpsilon*FermionY**2*vev)/(4.*FermionEta**3*cmath.pi*PionMass*cmath.sqrt(NDark)) + (CL*FermionEpsilon*FermionY**2*vev)/(2.*FermionA*FermionEta**3*cmath.pi*PionMass*cmath.sqrt(NDark))',
-                  order = {'NP':1,'QED':2})
-
-GC_139 = Coupling(name = 'GC_139',
+GC_115 = Coupling(name = 'GC_115',
                   value = '-(ee**2*vev)/(4.*cw) - (cw*ee**2*vev)/(4.*sw**2)',
                   order = {'QED':1})
 
-GC_140 = Coupling(name = 'GC_140',
+GC_116 = Coupling(name = 'GC_116',
                   value = '(ee**2*vev)/(4.*cw) - (cw*ee**2*vev)/(4.*sw**2)',
                   order = {'QED':1})
 
-GC_141 = Coupling(name = 'GC_141',
+GC_117 = Coupling(name = 'GC_117',
                   value = '-(ee**2*vev)/(4.*cw) + (cw*ee**2*vev)/(4.*sw**2)',
                   order = {'QED':1})
 
-GC_142 = Coupling(name = 'GC_142',
+GC_118 = Coupling(name = 'GC_118',
                   value = '(ee**2*vev)/(4.*cw) + (cw*ee**2*vev)/(4.*sw**2)',
                   order = {'QED':1})
 
-GC_143 = Coupling(name = 'GC_143',
+GC_119 = Coupling(name = 'GC_119',
                   value = '-(ee**2*complex(0,1)*vev)/2. - (cw**2*ee**2*complex(0,1)*vev)/(4.*sw**2) - (ee**2*complex(0,1)*sw**2*vev)/(4.*cw**2)',
                   order = {'QED':1})
 
-GC_144 = Coupling(name = 'GC_144',
+GC_120 = Coupling(name = 'GC_120',
                   value = 'ee**2*complex(0,1)*vev + (cw**2*ee**2*complex(0,1)*vev)/(2.*sw**2) + (ee**2*complex(0,1)*sw**2*vev)/(2.*cw**2)',
                   order = {'QED':1})
 
-GC_145 = Coupling(name = 'GC_145',
-                  value = '(CL*ee*FermionEpsilon*FermionY**2*vev**2)/(2.*FermionEta**3*cmath.pi*PionMass*cmath.sqrt(NDark)) - (CL*ee*FermionEpsilon*FermionY**2*vev**2)/(FermionA*FermionEta**3*cmath.pi*PionMass*cmath.sqrt(NDark))',
-                  order = {'NP':1,'QED':2})
+GC_121 = Coupling(name = 'GC_121',
+                  value = 'Me/VPi',
+                  order = {'1':1})
 
-GC_146 = Coupling(name = 'GC_146',
-                  value = '-(CL*ee*FermionEpsilon*FermionY**2*vev**2)/(2.*FermionEta**3*cmath.pi*PionMass*cmath.sqrt(NDark)) + (CL*ee*FermionEpsilon*FermionY**2*vev**2)/(FermionA*FermionEta**3*cmath.pi*PionMass*cmath.sqrt(NDark))',
-                  order = {'NP':1,'QED':2})
+GC_122 = Coupling(name = 'GC_122',
+                  value = '(complex(0,1)*Me*cmath.sqrt(2))/VPi',
+                  order = {'1':1})
 
-GC_147 = Coupling(name = 'GC_147',
-                  value = '(CL*ee*FermionEpsilon*FermionY**2*vev**2)/(2.*FermionEta**3*cmath.pi*PionMass*sw*cmath.sqrt(NDark)) - (CL*ee*FermionEpsilon*FermionY**2*vev**2)/(FermionA*FermionEta**3*cmath.pi*PionMass*sw*cmath.sqrt(NDark))',
-                  order = {'NP':1,'QED':2})
+GC_123 = Coupling(name = 'GC_123',
+                  value = 'MMU/VPi',
+                  order = {'1':1})
 
-GC_148 = Coupling(name = 'GC_148',
-                  value = '-(CL*ee*FermionEpsilon*FermionY**2*vev**2)/(2.*FermionEta**3*cmath.pi*PionMass*sw*cmath.sqrt(NDark)) + (CL*ee*FermionEpsilon*FermionY**2*vev**2)/(FermionA*FermionEta**3*cmath.pi*PionMass*sw*cmath.sqrt(NDark))',
-                  order = {'NP':1,'QED':2})
+GC_124 = Coupling(name = 'GC_124',
+                  value = '(complex(0,1)*MMU*cmath.sqrt(2))/VPi',
+                  order = {'1':1})
 
-GC_149 = Coupling(name = 'GC_149',
-                  value = '(CL*cw*ee*FermionEpsilon*FermionY**2*vev**2)/(2.*FermionEta**3*cmath.pi*PionMass*sw*cmath.sqrt(NDark)) - (CL*cw*ee*FermionEpsilon*FermionY**2*vev**2)/(FermionA*FermionEta**3*cmath.pi*PionMass*sw*cmath.sqrt(NDark))',
-                  order = {'NP':1,'QED':2})
+GC_125 = Coupling(name = 'GC_125',
+                  value = 'msbarDownQuark1/VPi',
+                  order = {'1':1})
 
-GC_150 = Coupling(name = 'GC_150',
-                  value = '-(CL*cw*ee*FermionEpsilon*FermionY**2*vev**2)/(2.*FermionEta**3*cmath.pi*PionMass*sw*cmath.sqrt(NDark)) + (CL*cw*ee*FermionEpsilon*FermionY**2*vev**2)/(FermionA*FermionEta**3*cmath.pi*PionMass*sw*cmath.sqrt(NDark))',
-                  order = {'NP':1,'QED':2})
+GC_126 = Coupling(name = 'GC_126',
+                  value = '(complex(0,1)*msbarDownQuark1*cmath.sqrt(2))/VPi',
+                  order = {'1':1})
 
-GC_151 = Coupling(name = 'GC_151',
+GC_127 = Coupling(name = 'GC_127',
+                  value = 'msbarDownQuark2/VPi',
+                  order = {'1':1})
+
+GC_128 = Coupling(name = 'GC_128',
+                  value = '(complex(0,1)*msbarDownQuark2*cmath.sqrt(2))/VPi',
+                  order = {'1':1})
+
+GC_129 = Coupling(name = 'GC_129',
+                  value = 'msbarDownQuark3/VPi',
+                  order = {'1':1})
+
+GC_130 = Coupling(name = 'GC_130',
+                  value = '(complex(0,1)*msbarDownQuark3*cmath.sqrt(2))/VPi',
+                  order = {'1':1})
+
+GC_131 = Coupling(name = 'GC_131',
+                  value = '-(msbarUpQuark1/VPi)',
+                  order = {'1':1})
+
+GC_132 = Coupling(name = 'GC_132',
+                  value = '-((complex(0,1)*msbarUpQuark1*cmath.sqrt(2))/VPi)',
+                  order = {'1':1})
+
+GC_133 = Coupling(name = 'GC_133',
+                  value = '-(msbarUpQuark2/VPi)',
+                  order = {'1':1})
+
+GC_134 = Coupling(name = 'GC_134',
+                  value = '-((complex(0,1)*msbarUpQuark2*cmath.sqrt(2))/VPi)',
+                  order = {'1':1})
+
+GC_135 = Coupling(name = 'GC_135',
+                  value = '-(msbarUpQuark3/VPi)',
+                  order = {'1':1})
+
+GC_136 = Coupling(name = 'GC_136',
+                  value = '-((complex(0,1)*msbarUpQuark3*cmath.sqrt(2))/VPi)',
+                  order = {'1':1})
+
+GC_137 = Coupling(name = 'GC_137',
+                  value = 'MTA/VPi',
+                  order = {'1':1})
+
+GC_138 = Coupling(name = 'GC_138',
+                  value = '(complex(0,1)*MTA*cmath.sqrt(2))/VPi',
+                  order = {'1':1})
+
+GC_139 = Coupling(name = 'GC_139',
+                  value = '-((MW*Xi)/VPi)',
+                  order = {'1':1})
+
+GC_140 = Coupling(name = 'GC_140',
+                  value = '(MW*Xi)/VPi',
+                  order = {'1':1})
+
+GC_141 = Coupling(name = 'GC_141',
+                  value = '-((MW*Xi)/(cw*VPi))',
+                  order = {'1':1})
+
+GC_142 = Coupling(name = 'GC_142',
+                  value = '(MW*Xi)/(cw*VPi)',
+                  order = {'1':1})
+
+GC_143 = Coupling(name = 'GC_143',
                   value = '-(yb/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_152 = Coupling(name = 'GC_152',
+GC_144 = Coupling(name = 'GC_144',
                   value = '-((complex(0,1)*yb)/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_153 = Coupling(name = 'GC_153',
+GC_145 = Coupling(name = 'GC_145',
                   value = '-((complex(0,1)*yc)/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_154 = Coupling(name = 'GC_154',
+GC_146 = Coupling(name = 'GC_146',
                   value = 'yc/cmath.sqrt(2)',
                   order = {'QED':1})
 
-GC_155 = Coupling(name = 'GC_155',
+GC_147 = Coupling(name = 'GC_147',
                   value = '-(ydo/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_156 = Coupling(name = 'GC_156',
+GC_148 = Coupling(name = 'GC_148',
                   value = '-((complex(0,1)*ydo)/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_157 = Coupling(name = 'GC_157',
+GC_149 = Coupling(name = 'GC_149',
                   value = '-ye',
                   order = {'QED':1})
 
-GC_158 = Coupling(name = 'GC_158',
+GC_150 = Coupling(name = 'GC_150',
                   value = 'ye',
                   order = {'QED':1})
 
-GC_159 = Coupling(name = 'GC_159',
+GC_151 = Coupling(name = 'GC_151',
                   value = '-(ye/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_160 = Coupling(name = 'GC_160',
+GC_152 = Coupling(name = 'GC_152',
                   value = '-((complex(0,1)*ye)/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_161 = Coupling(name = 'GC_161',
+GC_153 = Coupling(name = 'GC_153',
                   value = '-ym',
                   order = {'QED':1})
 
-GC_162 = Coupling(name = 'GC_162',
+GC_154 = Coupling(name = 'GC_154',
                   value = 'ym',
                   order = {'QED':1})
 
-GC_163 = Coupling(name = 'GC_163',
+GC_155 = Coupling(name = 'GC_155',
                   value = '-(ym/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_164 = Coupling(name = 'GC_164',
+GC_156 = Coupling(name = 'GC_156',
                   value = '-((complex(0,1)*ym)/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_165 = Coupling(name = 'GC_165',
+GC_157 = Coupling(name = 'GC_157',
                   value = '-(ys/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_166 = Coupling(name = 'GC_166',
+GC_158 = Coupling(name = 'GC_158',
                   value = '-((complex(0,1)*ys)/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_167 = Coupling(name = 'GC_167',
+GC_159 = Coupling(name = 'GC_159',
                   value = '-((complex(0,1)*yt)/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_168 = Coupling(name = 'GC_168',
+GC_160 = Coupling(name = 'GC_160',
                   value = 'yt/cmath.sqrt(2)',
                   order = {'QED':1})
 
-GC_169 = Coupling(name = 'GC_169',
+GC_161 = Coupling(name = 'GC_161',
                   value = '-ytau',
                   order = {'QED':1})
 
-GC_170 = Coupling(name = 'GC_170',
+GC_162 = Coupling(name = 'GC_162',
                   value = 'ytau',
                   order = {'QED':1})
 
-GC_171 = Coupling(name = 'GC_171',
+GC_163 = Coupling(name = 'GC_163',
                   value = '-(ytau/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_172 = Coupling(name = 'GC_172',
+GC_164 = Coupling(name = 'GC_164',
                   value = '-((complex(0,1)*ytau)/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_173 = Coupling(name = 'GC_173',
+GC_165 = Coupling(name = 'GC_165',
                   value = '-((complex(0,1)*yup)/cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_174 = Coupling(name = 'GC_174',
+GC_166 = Coupling(name = 'GC_166',
                   value = 'yup/cmath.sqrt(2)',
                   order = {'QED':1})
 
-GC_175 = Coupling(name = 'GC_175',
+GC_167 = Coupling(name = 'GC_167',
                   value = '(ee**2*complex(0,1)*complexconjugate(CKM1x1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                   order = {'QED':2})
 
-GC_176 = Coupling(name = 'GC_176',
+GC_168 = Coupling(name = 'GC_168',
                   value = '(ee*complex(0,1)*complexconjugate(CKM1x1))/(sw*cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_177 = Coupling(name = 'GC_177',
+GC_169 = Coupling(name = 'GC_169',
                   value = '(ee**2*complex(0,1)*complexconjugate(CKM1x2)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                   order = {'QED':2})
 
-GC_178 = Coupling(name = 'GC_178',
+GC_170 = Coupling(name = 'GC_170',
                   value = '(ee*complex(0,1)*complexconjugate(CKM1x2))/(sw*cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_179 = Coupling(name = 'GC_179',
+GC_171 = Coupling(name = 'GC_171',
                   value = '(ee**2*complex(0,1)*complexconjugate(CKM1x3)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                   order = {'QED':2})
 
-GC_180 = Coupling(name = 'GC_180',
+GC_172 = Coupling(name = 'GC_172',
                   value = '(ee*complex(0,1)*complexconjugate(CKM1x3))/(sw*cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_181 = Coupling(name = 'GC_181',
+GC_173 = Coupling(name = 'GC_173',
                   value = '(ee**2*complex(0,1)*complexconjugate(CKM2x1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                   order = {'QED':2})
 
-GC_182 = Coupling(name = 'GC_182',
+GC_174 = Coupling(name = 'GC_174',
                   value = '(ee*complex(0,1)*complexconjugate(CKM2x1))/(sw*cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_183 = Coupling(name = 'GC_183',
+GC_175 = Coupling(name = 'GC_175',
                   value = '(ee**2*complex(0,1)*complexconjugate(CKM2x2)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                   order = {'QED':2})
 
-GC_184 = Coupling(name = 'GC_184',
+GC_176 = Coupling(name = 'GC_176',
                   value = '(ee*complex(0,1)*complexconjugate(CKM2x2))/(sw*cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_185 = Coupling(name = 'GC_185',
+GC_177 = Coupling(name = 'GC_177',
                   value = '(ee**2*complex(0,1)*complexconjugate(CKM2x3)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                   order = {'QED':2})
 
-GC_186 = Coupling(name = 'GC_186',
+GC_178 = Coupling(name = 'GC_178',
                   value = '(ee*complex(0,1)*complexconjugate(CKM2x3))/(sw*cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_187 = Coupling(name = 'GC_187',
+GC_179 = Coupling(name = 'GC_179',
                   value = '(ee**2*complex(0,1)*complexconjugate(CKM3x1)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                   order = {'QED':2})
 
-GC_188 = Coupling(name = 'GC_188',
+GC_180 = Coupling(name = 'GC_180',
                   value = '(ee*complex(0,1)*complexconjugate(CKM3x1))/(sw*cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_189 = Coupling(name = 'GC_189',
+GC_181 = Coupling(name = 'GC_181',
                   value = '-(CKM1x1*ee**2*complex(0,1)*complexconjugate(CKM1x1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM2x1*ee**2*complex(0,1)*complexconjugate(CKM2x1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM3x1*ee**2*complex(0,1)*complexconjugate(CKM3x1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                   order = {'QED':2})
 
-GC_190 = Coupling(name = 'GC_190',
+GC_182 = Coupling(name = 'GC_182',
                   value = '-(CKM1x2*ee**2*complex(0,1)*complexconjugate(CKM1x1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM2x2*ee**2*complex(0,1)*complexconjugate(CKM2x1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM3x2*ee**2*complex(0,1)*complexconjugate(CKM3x1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                   order = {'QED':2})
 
-GC_191 = Coupling(name = 'GC_191',
+GC_183 = Coupling(name = 'GC_183',
                   value = '-(CKM1x3*ee**2*complex(0,1)*complexconjugate(CKM1x1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM2x3*ee**2*complex(0,1)*complexconjugate(CKM2x1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM3x3*ee**2*complex(0,1)*complexconjugate(CKM3x1)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                   order = {'QED':2})
 
-GC_192 = Coupling(name = 'GC_192',
+GC_184 = Coupling(name = 'GC_184',
                   value = '(ee**2*complex(0,1)*complexconjugate(CKM3x2)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                   order = {'QED':2})
 
-GC_193 = Coupling(name = 'GC_193',
+GC_185 = Coupling(name = 'GC_185',
                   value = '(ee*complex(0,1)*complexconjugate(CKM3x2))/(sw*cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_194 = Coupling(name = 'GC_194',
+GC_186 = Coupling(name = 'GC_186',
                   value = '-(CKM1x1*ee**2*complex(0,1)*complexconjugate(CKM1x2)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM2x1*ee**2*complex(0,1)*complexconjugate(CKM2x2)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM3x1*ee**2*complex(0,1)*complexconjugate(CKM3x2)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                   order = {'QED':2})
 
-GC_195 = Coupling(name = 'GC_195',
+GC_187 = Coupling(name = 'GC_187',
                   value = '-(CKM1x2*ee**2*complex(0,1)*complexconjugate(CKM1x2)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM2x2*ee**2*complex(0,1)*complexconjugate(CKM2x2)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM3x2*ee**2*complex(0,1)*complexconjugate(CKM3x2)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                   order = {'QED':2})
 
-GC_196 = Coupling(name = 'GC_196',
+GC_188 = Coupling(name = 'GC_188',
                   value = '-(CKM1x3*ee**2*complex(0,1)*complexconjugate(CKM1x2)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM2x3*ee**2*complex(0,1)*complexconjugate(CKM2x2)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM3x3*ee**2*complex(0,1)*complexconjugate(CKM3x2)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                   order = {'QED':2})
 
-GC_197 = Coupling(name = 'GC_197',
+GC_189 = Coupling(name = 'GC_189',
                   value = '(ee**2*complex(0,1)*complexconjugate(CKM3x3)*cmath.sqrt(NDark))/(4.*cmath.pi*sw**2*cmath.sqrt(2))',
                   order = {'QED':2})
 
-GC_198 = Coupling(name = 'GC_198',
+GC_190 = Coupling(name = 'GC_190',
                   value = '(ee*complex(0,1)*complexconjugate(CKM3x3))/(sw*cmath.sqrt(2))',
                   order = {'QED':1})
 
-GC_199 = Coupling(name = 'GC_199',
+GC_191 = Coupling(name = 'GC_191',
                   value = '-(CKM1x1*ee**2*complex(0,1)*complexconjugate(CKM1x3)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM2x1*ee**2*complex(0,1)*complexconjugate(CKM2x3)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM3x1*ee**2*complex(0,1)*complexconjugate(CKM3x3)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                   order = {'QED':2})
 
-GC_200 = Coupling(name = 'GC_200',
+GC_192 = Coupling(name = 'GC_192',
                   value = '-(CKM1x2*ee**2*complex(0,1)*complexconjugate(CKM1x3)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM2x2*ee**2*complex(0,1)*complexconjugate(CKM2x3)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM3x2*ee**2*complex(0,1)*complexconjugate(CKM3x3)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                   order = {'QED':2})
 
-GC_201 = Coupling(name = 'GC_201',
+GC_193 = Coupling(name = 'GC_193',
                   value = '-(CKM1x3*ee**2*complex(0,1)*complexconjugate(CKM1x3)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM2x3*ee**2*complex(0,1)*complexconjugate(CKM2x3)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2) - (CKM3x3*ee**2*complex(0,1)*complexconjugate(CKM3x3)*cmath.sqrt(NDark))/(8.*cmath.pi*sw**2)',
                   order = {'QED':2})
 

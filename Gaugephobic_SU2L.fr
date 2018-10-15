@@ -17,8 +17,9 @@ M$Information = { Authors->{"Bryan Ostdiek, Tom Tong"},
 (* ************************** *)
 (* *****  Change Log    ***** *)
 (* ************************** *)
-(* v1.0 Fixed the LRhoDPGauge terms with an extra factor of 2 *)
-(* v0.9 Fixed the LDPHiggsGauge terms*)
+(* v1.0 Paper parameterizations *)
+(* v0.8 Fixed the LRhoDPGauge terms with an extra factor of 2 *)
+(* v0.7 Fixed the LDPHiggsGauge terms*)
 (* v0.2 Change parameters to match those in the U(1) case *)
 (* v0.1 Added ms-bar masses for the quarks which affects the pion fermionic decay *)
 
@@ -123,23 +124,15 @@ M$Parameters = {
     TeX           -> \[Eta],
     Description   -> "Ratio of the dark pion mass to the dark rho mass"
   },
-  FermionA == {
+  VPi == {
     ParameterType -> External,
-    Value         -> 0.1,
-    Description   -> "Percent difference in fermion masses",
-    InteractionOrder -> {QED,0}
+    Value         -> 10000.0,
+    Description   -> "Controls coupling of dark pions to fermions [Equation 12]"
   },
-  FermionEpsilon == {
+  Xi == {
     ParamterType -> External,
     Value        -> 0.1,
-    Description  -> "Epsilon",
-    InteractionOrder -> {QED, 1}
-  },
-  FermionY == {
-    ParamterType -> External,
-    Value        -> 3*^-3,
-    Description  -> "Yukawa y",
-    InteractionOrder -> {QED, 1}
+    Description  -> "Controls coupling of dark pions to gauge-higss [Equation 12]"
   },
 
 (* Internal parameters *)
@@ -192,13 +185,13 @@ M$Parameters = {
 
   cPiHiggsGauge == {
     ParameterType -> Internal,
-    Definitions -> {cPiHiggsGauge -> -(2 * FermionEpsilon * FermionY^2 * gw * vev * MH^2) / (Pi * FermionA * (2 + FermionA)^2 * FermionEta^3 * PionMass^3)},
+    Definitions -> {cPiHiggsGauge -> - Xi * MW / VPi},
     Description  -> "Coupling between the dark pion, Higgs, and gauge bosons",
     InteractionOrder -> {NP, 1}
   },
   cPiFermion == {
     ParameterType -> Internal,
-    Definitions -> {cPiFermion -> 2*Sqrt[2] * FermionEpsilon * FermionY^2 / (Pi * FermionA * (2+FermionA) * FermionEta^3 * PionMass)},
+    Definitions -> {cPiFermion -> Sqrt[2] / VPi },
     InteractionOrder -> {NP, 1},
     Description  -> "Coupling between the dark pion and SM Fermions"
   },
@@ -211,7 +204,7 @@ M$Parameters = {
     InteractionOrder -> {NP, 1},
     Description -> "Strong coupling between the dark mesons"
   },
-  cRhoPiGauge == {
+  (* cRhoPiGauge == {
     ParameterType-> Internal,
     Definitions -> {cRhoPiGauge-> (CL/(4 *Pi)) ((2-FermionA) * FermionEpsilon * FermionY^2 * gw * vev^2) / (Sqrt[NDark] * FermionA * FermionEta^3 * PionMass)},
     InteractionOrder -> {NP, 1},
@@ -222,7 +215,7 @@ M$Parameters = {
     Definitions ->  {cRhoPiHiggs-> (CL/(4 *Pi)) (2 * FermionEpsilon * FermionY^2 * vev)/(Sqrt[NDark] * FermionA * FermionEta^3 * PionMass) * (1-FermionA/2 + MH^2/PionMass^2)} ,
     InteractionOrder -> {NP, 1},
     Description -> "Dark Pion coupling to dark rho and Higgs boson"
-  },
+  }, *)
   cKineticMixing == {
     ParameterType -> Internal,
     Definitions -> {cKineticMixing -> Sqrt[NDark]/(4*Pi) * gw},
@@ -273,13 +266,13 @@ LDarkRhoKinetic := Block[{mu,nu, i}, ExpandIndices[- 1/4 (del[Rhoi[nu,i],mu]-del
 
 LRhoDPDP := Block[{mu, a, b, c},ExpandIndices[cRhoPiPi * (Rhoi[mu,a] * DPi[b] del[DPi[c],mu] Eps[a,b,c])]];
 
-LRhoDPGauge := Block[{mu, a, b, c},
+(* LRhoDPGauge := Block[{mu, a, b, c},
                      cRhoPiGauge * 2 * ExpandIndices[Rhoi[mu, a] * DPi[b] * Wi[mu, c] * Eps[a, b, c]]
-                    ];
+                    ]; *)
 
-LRhoDPHiggs := Block[{mu, a},
+(* LRhoDPHiggs := Block[{mu, a},
 ExpandIndices[cRhoPiHiggs * ExpandIndices[(Rhoi[mu, a]*DPi[a]*del[H, mu] - Rhoi[mu, a]*del[DPi[a], mu]*H)]]
-];
+]; *)
 
 LKineticMixing := Block[{mu, a, b, c},
 ExpandIndices[gw cKineticMixing (LLbar.ProjM[mu].Ta[a].LL Rhoi[mu,a] +  QLbar.ProjM[mu].Ta[a].QL Rhoi[mu,a] )
@@ -288,4 +281,4 @@ ExpandIndices[gw cKineticMixing (LLbar.ProjM[mu].Ta[a].LL Rhoi[mu,a] +  QLbar.Pr
 
 (* Everything Combined *)
 LDarkSector = ExpandIndices[LDPKin + LDPFermions + LDPHiggsGauge +
-              LDarkRhoKinetic + LRhoDPDP + LRhoDPGauge + LRhoDPHiggs + LKineticMixing];
+              LDarkRhoKinetic + LRhoDPDP + LKineticMixing];
