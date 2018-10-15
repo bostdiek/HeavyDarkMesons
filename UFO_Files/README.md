@@ -16,7 +16,7 @@ There are two sets of UFO models. The first is called "FromPaper", and it contai
  - VPi: controls the coupling between the dark pions and the standard model particles.
  - Ƹ (Xi): suppression of the gauge-higgs couplings of the dark pions. This is set to 1.0 in the gaugephilic modes and cannot be changed. The gaugephobic modes have this as a free parameter that must be set by the user.
 
-The other set of UFO models are specific to certain implementations of heavy dark mesons. The gaugephobic ones are designed after "Stealth Dark Matter" [https://arxiv.org/abs/1503.04203]. Lastly, as an example of a gaugephilic model, we include a model where the dark pions are related to electroweak symmetry breaking, similar to "Induced Electroweak Symmetry Breaking" [https://arxiv.org/abs/1411.6023].
+The other set of UFO models are specific to certain implementations of heavy dark mesons. For an in depth discussion of the theories which lead to gaugephilic or gaugephobic scenarios, see https://arxiv.org/abs/1809.10183. The gaugephobic implementations included here are designed after "Stealth Dark Matter" [https://arxiv.org/abs/1503.04203]. Lastly, as an example of a gaugephilic model, we include a model where the dark pions are related to electroweak symmetry breaking, similar to "Induced Electroweak Symmetry Breaking" [https://arxiv.org/abs/1411.6023].
 
 Our parameterizations are slightly different than those papers. Please contact us with any questions.
 
