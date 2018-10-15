@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.24
 # Mathematica version: 10.3.0 for Mac OS X x86 (64-bit) (October 9, 2015)
-# Date: Wed 26 Sep 2018 10:45:34
+# Date: Mon 15 Oct 2018 10:00:30
 
 
 
@@ -145,29 +145,21 @@ FermionEta = Parameter(name = 'FermionEta',
                        lhablock = 'FRBlock',
                        lhacode = [ 3 ])
 
-FermionA = Parameter(name = 'FermionA',
-                     nature = 'external',
-                     type = 'real',
-                     value = 0.1,
-                     texname = '\\text{FermionA}',
-                     lhablock = 'FRBlock',
-                     lhacode = [ 4 ])
+VPi = Parameter(name = 'VPi',
+                nature = 'external',
+                type = 'real',
+                value = 10000.,
+                texname = '\\text{VPi}',
+                lhablock = 'FRBlock',
+                lhacode = [ 4 ])
 
-FermionEpsilon = Parameter(name = 'FermionEpsilon',
-                           nature = 'external',
-                           type = 'real',
-                           value = 0.1,
-                           texname = '\\text{FermionEpsilon}',
-                           lhablock = 'FRBlock',
-                           lhacode = [ 5 ])
-
-FermionY = Parameter(name = 'FermionY',
-                     nature = 'external',
-                     type = 'real',
-                     value = 0.003,
-                     texname = '\\text{FermionY}',
-                     lhablock = 'FRBlock',
-                     lhacode = [ 6 ])
+Xi = Parameter(name = 'Xi',
+               nature = 'external',
+               type = 'real',
+               value = 0.1,
+               texname = '\\text{Xi}',
+               lhablock = 'FRBlock',
+               lhacode = [ 5 ])
 
 MZ = Parameter(name = 'MZ',
                nature = 'external',
@@ -436,7 +428,7 @@ msbarDownQuark3 = Parameter(name = 'msbarDownQuark3',
 cPiFermion = Parameter(name = 'cPiFermion',
                        nature = 'internal',
                        type = 'real',
-                       value = '(-2*FermionEpsilon*FermionY**2*cmath.sqrt(2))/(FermionA*(2 + FermionA)*FermionEta**3*cmath.pi*PionMass)',
+                       value = 'cmath.sqrt(2)/VPi',
                        texname = '\\text{cPiFermion}')
 
 MW = Parameter(name = 'MW',
@@ -468,6 +460,12 @@ sw2 = Parameter(name = 'sw2',
                 type = 'real',
                 value = '1 - MW**2/MZ**2',
                 texname = '\\text{sw2}')
+
+cPiHiggsGauge = Parameter(name = 'cPiHiggsGauge',
+                          nature = 'internal',
+                          type = 'real',
+                          value = '-((MW*Xi)/VPi)',
+                          texname = '\\text{cPiHiggsGauge}')
 
 cw = Parameter(name = 'cw',
                nature = 'internal',
@@ -504,18 +502,6 @@ cKineticMixing = Parameter(name = 'cKineticMixing',
                            type = 'real',
                            value = '(g1*cmath.sqrt(NDark))/(4.*cmath.pi)',
                            texname = '\\text{cKineticMixing}')
-
-cPiHiggsGauge = Parameter(name = 'cPiHiggsGauge',
-                          nature = 'internal',
-                          type = 'real',
-                          value = '(2*FermionEpsilon*FermionY**2*gw*MH**2*vev)/(FermionA*(2 + FermionA)**2*FermionEta**3*cmath.pi*PionMass**3)',
-                          texname = '\\text{cPiHiggsGauge}')
-
-cPiWPi = Parameter(name = 'cPiWPi',
-                   nature = 'internal',
-                   type = 'complex',
-                   value = '(2*FermionY**2*complex(0,1)*gw*vev**2)/(FermionA**2*FermionEta**2*PionMass**2)',
-                   texname = '\\text{cPiWPi}')
 
 lam = Parameter(name = 'lam',
                 nature = 'internal',

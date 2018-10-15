@@ -99,7 +99,7 @@ M$Parameters = {
     ParameterType -> External,
     Value         -> 10000.0,
     Description   -> "Controls coupling of dark pions to fermions [Equation 12]",
-    InteractionOrder -> {QED,0}
+    InteractionOrder -> {QED,-1}
   },
   Xi == {
     ParamterType -> External,

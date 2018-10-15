@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.24
 # Mathematica version: 10.3.0 for Mac OS X x86 (64-bit) (October 9, 2015)
-# Date: Wed 26 Sep 2018 10:44:33
+# Date: Mon 15 Oct 2018 09:59:33
 
 
 # 
@@ -37,13 +37,13 @@
 # Parameter definitions
 #
 
-   * Parameter cPiWPi is complex, but declared as real. Changing type to complex.
+   * All parameters are ok.
 
 
 # Vertices
    * Calling FeynmanRules for 2 Lagrangians.
-   * Number of classes vertices: 129
-   * Number of flavored vertices: 199
+   * Number of classes vertices: 127
+   * Number of flavored vertices: 197
    * Saved vertices in InterfaceRun[ 1 ].
    * Checked QNumber conservation.
       - Quantum number GhostNumber conserved in all vertices.
@@ -56,7 +56,7 @@
 # Vertex definitions
 #
 
-   * 199 vertices written.
+   * 197 vertices written.
    * vertices.py written.
 #
 # Lorentz structure definitions
@@ -68,7 +68,7 @@
 # Coupling definitions
 #
 
-   * 156 couplings written.
+   * 155 couplings written.
    * couplings.py written.
 #
 # Coupling order definitions
