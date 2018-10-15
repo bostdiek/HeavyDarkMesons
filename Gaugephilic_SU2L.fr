@@ -122,6 +122,12 @@ M$Parameters = {
     TeX           -> \[Eta],
     Description   -> "Ratio of the dark pion mass to the dark rho mass"
   },
+  VPi == {
+    ParameterType -> External,
+    Value         -> 10000.0,
+    Description   -> "Controls coupling of dark pions to fermions [Equation 12]",
+    InteractionOrder -> {QED,-1}
+  },
 
 (* Internal parameters *)
 
@@ -168,13 +174,13 @@ M$Parameters = {
 
   cPiHiggsGauge == {
     ParameterType -> Internal,
-    Definitions -> {cPiHiggsGauge -> gw/2 * MH/MDP},
+    Definitions -> {cPiHiggsGauge -> -MW / VPi},
     Description  -> "Coupling between the dark pion, Higgs, and gauge bosons",
     InteractionOrder -> {NP, 1}
   },
   cPiFermion == {
     ParameterType -> Internal,
-    Definitions -> {cPiFermion -> Sqrt[2] / vev / Sqrt[MDP^2/MH^2 - 1]},
+    Definitions -> {cPiFermion -> Sqrt[2] / VPi },
     InteractionOrder -> {NP, 1},
     Description  -> "Coupling between the dark pion and SM Fermions"
   },
