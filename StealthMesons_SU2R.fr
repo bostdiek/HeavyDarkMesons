@@ -1,0 +1,254 @@
+(* ********************************************************* *)
+(* *****                                               ***** *)
+(* *****  FeynRules model file: SM + Dark Pion and Rho ***** *)
+(* *****  Author: B. Ostdiek T. Tong                   ***** *)
+(* *****  Version:  1.0                                ***** *)
+(* ********************************************************* *)
+
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "StealthMesons_SU2R";
+M$Information = { Authors->{"Bryan Ostdiek, Tom Tong"},
+                  Emails->{"bostdiek@uoregon.edu"},
+                  Institutions->{"University of Oregon"},
+                  Version->"1.0"};
+
+(* ************************** *)
+(* *****  Change Log    ***** *)
+(* ************************** *)
+(* v1.0 Fixed the LDPHiggsGauge terms*)
+(* v0.7 Fixed pion mass term *)
+(* v0.6 Change Rho0 ParticleName to be actually rho0 *)
+(* v0.5 Change MDPc term to be defined internally *)
+(* v0.4 Change epsilon*y^2 term to be defined internally and remove charged rho *)
+(* v0.3 Fixed other interactions in the U(1) case *)
+(* v0.2 Added the U(1) case which charged pion decays to W and neutral pion *)
+(* v0.1 Added ms-bar masses for the quarks which affects the pion fermionic decay *)
+
+FeynmanGauge = True;
+
+
+(* ************************** *)
+(* *** Interaction orders *** *)
+(* ************************** *)
+M$InteractionOrderHierarchy = { {QCD, 1}, {QED, 2}, {NP,1} };
+
+(* ************************** *)
+(* *****   New Fields   ***** *)
+(* ************************** *)
+M$ClassesDescription = {
+(* Vectors (RHOS) *)
+  V[97] == {
+    ClassName       -> Rho0,
+    SelfConjugate   -> True,
+    Mass            -> {Mro, Internal},
+    Width           -> {Wro, 1},
+    ParticleName    -> "rho0",
+    PropagatorLabel -> "rho0",
+    PropagatorType  -> W,
+    PropagatorArrow -> None,
+    FullName        -> "Dark Rho0"
+  },
+
+(* Scalars (PIONS) *)
+  S[12] == {
+    ClassName -> DP,
+    SelfConjugate -> False,
+    Mass -> {MDPc, Internal},
+    Width -> {WDP, 5},
+    QuantumNumbers -> {Q -> 1},
+    ParticleName -> "DP+",
+    AntiParticleName -> "DP-"
+    },
+S[13] == {
+    ClassName -> DP0,
+    SelfConjugate -> True,
+    Mass -> {MDP, Internal},
+    Width -> {WDP0, 5},
+    ParticleName -> "DP0"
+    }
+};
+
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+M$Parameters = {
+(* External parameters *)
+  NDark == {
+    ParamterType -> External,
+    Value        -> 4,
+    Description  -> "Number of dark colors",
+    InteractionOrder -> {NP,0}
+  },
+  PionMass == {
+    ParameterType -> External,
+    Value         -> 150.0,
+    TeX           -> Subscript[M,\[Pi]],
+    Description   -> "Dark Pion mass"
+  },
+  FermionEta == {
+    ParameterType -> External,
+    Value         -> 0.45,
+    TeX           -> \[Eta],
+    Description   -> "Ratio of the dark pion mass to the dark rho mass"
+  },
+  FermionA == {
+    ParameterType -> External,
+    Value         -> 0.1,
+    Description   -> "Percent difference in fermion masses",
+    InteractionOrder -> {QED,0}
+  },
+  FermionEpsilon == {
+    ParamterType -> External,
+    Value        -> 0.1,
+    Description  -> "Epsilon",
+    InteractionOrder -> {QED, 1}
+  },
+  FermionY == {
+    ParamterType -> External,
+    Value        -> 3*^-3,
+    Description  -> "Yukawa y",
+    InteractionOrder -> {QED, 1}
+  },
+  (* Internal parameters *)
+  CL == {
+    ParameterType-> Internal,
+    Value -> 4*Pi,
+    Description -> "Constant for mesons",
+    InteractionOrder -> {NP, 1}
+  },
+  Mro == {
+    ParameterType -> Internal,
+    Value         -> PionMass / FermionEta,
+    TeX           -> Subscript[M,\[Rho]],
+    Description   -> "Dark Rho mass"
+  },
+  MDP == {
+    ParameterType -> Internal,
+    Value         -> PionMass,
+    Description   -> "Dark pion mass"
+  },
+  MDPc == {
+    ParameterType -> Internal,
+    Value         -> PionMass * Sqrt[1 + 3*Log[2]*ee^2/(8*Pi^2*FermionEta^2)],
+    Description   -> "Dark pion mass charged"
+  },
+  msbarUpQuark == {
+    ParameterType    -> Internal,
+    Indices          -> {Index[Generation]},
+    ComplexParameter -> False,
+    Value            -> {msbarUpQuark[1] -> 0,
+                         msbarUpQuark[2] -> 0.616,  (* charm quark msbar mass at mH *)
+                         msbarUpQuark[3] -> 169.2   (* top quark msbar mass at mH *)
+                         },
+    Description      -> "Up type quark msbar masses"
+  },
+  msbarDownQuark == {
+    ParameterType    -> Internal,
+    Indices          -> {Index[Generation]},
+    ComplexParameter -> False,
+    Value            -> {msbarDownQuark[1] -> 0,
+                         msbarDownQuark[2] -> 0,    (* strange quark msbar mass at mH *)
+                         msbarDownQuark[3] -> 2.76  (* bottom quark msbar mass at mH *)
+                         },
+    Description      -> "Down type quark msbar masses"
+  },
+
+
+  (*Non-Rho Couplings*)
+
+  cPiHiggsGauge == {
+    ParameterType -> Internal,
+    Definitions -> {cPiHiggsGauge -> (2 * FermionEpsilon * FermionY^2 * gw * vev * MH^2) / (Pi * FermionA * (2 + FermionA)^2 * FermionEta^3 * PionMass^3)},
+    Description  -> "Coupling between the dark pion, Higgs, and gauge bosons",
+    InteractionOrder -> {NP, 1}
+  },
+  cPiFermion == {
+    ParameterType -> Internal,
+    Definitions -> {cPiFermion -> -(2*Sqrt[2] * FermionEpsilon * FermionY^2) / (Pi * FermionA * (2+FermionA) * FermionEta^3 * PionMass)},
+    InteractionOrder -> {NP, 1},
+    Description  -> "Coupling between the dark pion and SM Fermions"
+  },
+  cPiWPi == {
+    ParameterType -> Internal,
+    Definitions -> {cPiWPi -> I * (2 * gw * FermionY^2 * vev^2) / (FermionA^2 * FermionEta^2 * PionMass^2)},
+    Description  -> "Coupling between the charged dark pion, W, and the neutral pion",
+    InteractionOrder -> {NP, 1}
+  },
+
+  (*Rho Couplings*)
+
+  cRhoPiPi == {
+    ParameterType -> Internal,
+    Definitions -> {cRhoPiPi -> (CL)/Sqrt[NDark]},
+    InteractionOrder -> {NP, 1},
+    Description -> "Strong coupling between the dark mesons"
+  },
+
+  cKineticMixing == {
+    ParameterType -> Internal,
+    Definitions -> {cKineticMixing -> Sqrt[NDark]/(4*Pi) * g1},
+    (*InteractionOrder -> {NP, 1},*)
+    Description-> "Mixing between the dark rho and the B"
+  }
+};
+
+
+(* New Lagrangian interaction terms *)
+
+(*Dark Pions without Rhos*)
+LDPKin = del[DPbar, mu] del[DP,mu] - MDPc^2 DP DPbar + 1/2 del[DP0, mu] del[DP0, mu] - 1/2 MDP^2 DP0 DP0;
+
+LDPQuark := Block[{s, f, r, tmp},
+                  tmp = cPiFermion * ((DP*uqbar[s, f, a].(msbarDownQuark[f] ProjP[s,r] - msbarUpQuark[f] ProjM[s,r]).dq[r, f, a]) +
+                                (DPbar dqbar[s, f, a].(msbarDownQuark[f] ProjM[s,r] - msbarUpQuark[f] ProjP[s,r]).uq[r,f,a]) +
+                                I/Sqrt[2] * DP0(msbarUpQuark[f] uqbar[s,f,a].(ProjP[s,r]-ProjM[s,r]).uq[r,f,a] -
+                                                msbarDownQuark[f] dqbar[s,f,a].(ProjP[s,r]-ProjM[s,r]).dq[r,f,a]
+                                                )
+                               );
+                  ExpandIndices[tmp,FlavorExpand->{SU2D,SU2W}]
+                  ]
+
+
+LDPLepton := Block[{s, f, r, tmp},
+                   tmp = cPiFermion * ((DP * vlbar[s, f].(Ml[f] ProjP[s,r] ).l[r,f]) +
+                                       (DPbar lbar[s, f].(Ml[f] ProjM[s,r] ).vl[r, f]) +
+                                       I/Sqrt[2] * DP0(-Ml[f] lbar[s, f].(ProjP[s,r]-ProjM[s,r]).l[r, f]
+                                          )
+                                      );
+                  ExpandIndices[tmp,FlavorExpand->{SU2D,SU2W}]
+                  ]
+LDPFermions := ExpandIndices[LDPQuark + LDPLepton,FlavorExpand->{SU2D,SU2W}]
+
+LDPHiggsGauge := Block[{mu},
+                       ExpandIndices[
+                       cPiHiggsGauge * (H Wbar[mu] del[DP, mu] - del[H, mu] Wbar[mu] DP + H W[mu] del[DPbar, mu] - del[H, mu] W[mu] DPbar + 1/cw (H Z[mu] del[DP0, mu] - del[H, mu] Z[mu] DP0))
+                      ]
+                      ];
+
+LDPWDP := Block[{mu},
+                       ExpandIndices[
+                       cPiWPi * (DP0 Wbar[mu] del[DP, mu] - DP Wbar[mu] del[DP0, mu] - DP0 W[mu] del[DPbar, mu] + DPbar W[mu] del[DP0, mu])
+                      ]
+                      ];
+
+(* Dark Rho Terms *)
+LDarkRhoKinetic := Block[{mu,nu}, - 1/4 FS[Rho0,mu,nu] FS[Rho0,mu,nu]] + Mro^2/2 Rho0[mu]Rho0[mu];
+
+LRhoDPDP := I * cRhoPiPi * Rho0[mu] * (DPbar.del[DP,mu] - del[DPbar,mu].DP)
+
+LKineticMixing := Block[{mu},
+    - g1 *cKineticMixing *(-1/2) *lbar.ProjM[mu].l Rho0[mu]  (*left handed leptons Y=-1/2*)
+    - g1 *cKineticMixing *(-1) *lRbar.ProjP[mu].lR Rho0[mu]  (*right handed leptons Y=-1*)
+
+    - g1 *cKineticMixing *(1/6) *uqbar.ProjM[mu].uq Rho0[mu]  (*left handed quarks Y=1/6*)
+    - g1 *cKineticMixing *(1/6) *dqbar.ProjM[mu].dq Rho0[mu]  (*left handed quarks Y=1/6*)
+    - g1 *cKineticMixing *(2/3) *uqbar.ProjP[mu].uq Rho0[mu]  (*right handed up quarks Y=2/3*)
+    - g1 *cKineticMixing *(-1/3) *dqbar.ProjP[mu].dq Rho0[mu]  (*right handed down quarks Y=-1/3*)
+];
+
+(* Everything Combined *)
+LDarkSector = ExpandIndices[LDPKin + LDPFermions + LDPHiggsGauge + LDPWDP +
+              LDarkRhoKinetic + LRhoDPDP + LKineticMixing];
