@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.24
 # Mathematica version: 10.3.0 for Mac OS X x86 (64-bit) (October 9, 2015)
-# Date: Mon 15 Oct 2018 09:37:13
+# Date: Mon 15 Oct 2018 09:52:26
 
 
 from object_library import all_couplings, Coupling
@@ -491,91 +491,91 @@ GC_120 = Coupling(name = 'GC_120',
 
 GC_121 = Coupling(name = 'GC_121',
                   value = 'Me/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_122 = Coupling(name = 'GC_122',
                   value = '(complex(0,1)*Me*cmath.sqrt(2))/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_123 = Coupling(name = 'GC_123',
                   value = 'MMU/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_124 = Coupling(name = 'GC_124',
                   value = '(complex(0,1)*MMU*cmath.sqrt(2))/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_125 = Coupling(name = 'GC_125',
                   value = 'msbarDownQuark1/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_126 = Coupling(name = 'GC_126',
                   value = '(complex(0,1)*msbarDownQuark1*cmath.sqrt(2))/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_127 = Coupling(name = 'GC_127',
                   value = 'msbarDownQuark2/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_128 = Coupling(name = 'GC_128',
                   value = '(complex(0,1)*msbarDownQuark2*cmath.sqrt(2))/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_129 = Coupling(name = 'GC_129',
                   value = 'msbarDownQuark3/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_130 = Coupling(name = 'GC_130',
                   value = '(complex(0,1)*msbarDownQuark3*cmath.sqrt(2))/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_131 = Coupling(name = 'GC_131',
                   value = '-(msbarUpQuark1/VPi)',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_132 = Coupling(name = 'GC_132',
                   value = '-((complex(0,1)*msbarUpQuark1*cmath.sqrt(2))/VPi)',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_133 = Coupling(name = 'GC_133',
                   value = '-(msbarUpQuark2/VPi)',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_134 = Coupling(name = 'GC_134',
                   value = '-((complex(0,1)*msbarUpQuark2*cmath.sqrt(2))/VPi)',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_135 = Coupling(name = 'GC_135',
                   value = '-(msbarUpQuark3/VPi)',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_136 = Coupling(name = 'GC_136',
                   value = '-((complex(0,1)*msbarUpQuark3*cmath.sqrt(2))/VPi)',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_137 = Coupling(name = 'GC_137',
                   value = 'MTA/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_138 = Coupling(name = 'GC_138',
                   value = '(complex(0,1)*MTA*cmath.sqrt(2))/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_139 = Coupling(name = 'GC_139',
                   value = '-((MW*Xi)/VPi)',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_140 = Coupling(name = 'GC_140',
                   value = '(MW*Xi)/VPi',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_141 = Coupling(name = 'GC_141',
                   value = '-((MW*Xi)/(cw*VPi))',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_142 = Coupling(name = 'GC_142',
                   value = '(MW*Xi)/(cw*VPi)',
-                  order = {'1':1})
+                  order = {'QED':1})
 
 GC_143 = Coupling(name = 'GC_143',
                   value = '-(yb/cmath.sqrt(2))',

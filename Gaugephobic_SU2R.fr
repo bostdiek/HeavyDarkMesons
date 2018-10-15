@@ -17,7 +17,8 @@ M$Information = { Authors->{"Bryan Ostdiek, Tom Tong"},
 (* ************************** *)
 (* *****  Change Log    ***** *)
 (* ************************** *)
-(* v1.0 Fixed the LDPHiggsGauge terms*)
+(* v1.0 Paper parameterizations *)
+(* v0.8 Fixed the LDPHiggsGauge terms*)
 (* v0.7 Fixed pion mass term *)
 (* v0.6 Change Rho0 ParticleName to be actually rho0 *)
 (* v0.5 Change MDPc term to be defined internally *)
@@ -94,23 +95,17 @@ M$Parameters = {
     TeX           -> \[Eta],
     Description   -> "Ratio of the dark pion mass to the dark rho mass"
   },
-  FermionA == {
+  VPi == {
     ParameterType -> External,
-    Value         -> 0.1,
-    Description   -> "Percent difference in fermion masses",
+    Value         -> 10000.0,
+    Description   -> "Controls coupling of dark pions to fermions [Equation 12]",
     InteractionOrder -> {QED,0}
   },
-  FermionEpsilon == {
+  Xi == {
     ParamterType -> External,
     Value        -> 0.1,
-    Description  -> "Epsilon",
-    InteractionOrder -> {QED, 1}
-  },
-  FermionY == {
-    ParamterType -> External,
-    Value        -> 3*^-3,
-    Description  -> "Yukawa y",
-    InteractionOrder -> {QED, 1}
+    Description  -> "Controls coupling of dark pions to gauge-higss [Equation 12]",
+    InteractionOrder -> {QED,0}
   },
   (* Internal parameters *)
   CL == {
@@ -161,21 +156,15 @@ M$Parameters = {
 
   cPiHiggsGauge == {
     ParameterType -> Internal,
-    Definitions -> {cPiHiggsGauge -> (2 * FermionEpsilon * FermionY^2 * gw * vev * MH^2) / (Pi * FermionA * (2 + FermionA)^2 * FermionEta^3 * PionMass^3)},
+    Definitions -> {cPiHiggsGauge -> - Xi * MW / VPi},
     Description  -> "Coupling between the dark pion, Higgs, and gauge bosons",
     InteractionOrder -> {NP, 1}
   },
   cPiFermion == {
     ParameterType -> Internal,
-    Definitions -> {cPiFermion -> -(2*Sqrt[2] * FermionEpsilon * FermionY^2) / (Pi * FermionA * (2+FermionA) * FermionEta^3 * PionMass)},
+    Definitions -> {cPiFermion -> Sqrt[2] / VPi},
     InteractionOrder -> {NP, 1},
     Description  -> "Coupling between the dark pion and SM Fermions"
-  },
-  cPiWPi == {
-    ParameterType -> Internal,
-    Definitions -> {cPiWPi -> I * (2 * gw * FermionY^2 * vev^2) / (FermionA^2 * FermionEta^2 * PionMass^2)},
-    Description  -> "Coupling between the charged dark pion, W, and the neutral pion",
-    InteractionOrder -> {NP, 1}
   },
 
   (*Rho Couplings*)
@@ -228,12 +217,6 @@ LDPHiggsGauge := Block[{mu},
                       ]
                       ];
 
-LDPWDP := Block[{mu},
-                       ExpandIndices[
-                       cPiWPi * (DP0 Wbar[mu] del[DP, mu] - DP Wbar[mu] del[DP0, mu] - DP0 W[mu] del[DPbar, mu] + DPbar W[mu] del[DP0, mu])
-                      ]
-                      ];
-
 (* Dark Rho Terms *)
 LDarkRhoKinetic := Block[{mu,nu}, - 1/4 FS[Rho0,mu,nu] FS[Rho0,mu,nu]] + Mro^2/2 Rho0[mu]Rho0[mu];
 
@@ -250,5 +233,5 @@ LKineticMixing := Block[{mu},
 ];
 
 (* Everything Combined *)
-LDarkSector = ExpandIndices[LDPKin + LDPFermions + LDPHiggsGauge + LDPWDP +
+LDarkSector = ExpandIndices[LDPKin + LDPFermions + LDPHiggsGauge +
               LDarkRhoKinetic + LRhoDPDP + LKineticMixing];
