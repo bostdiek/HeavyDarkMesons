@@ -204,18 +204,6 @@ M$Parameters = {
     InteractionOrder -> {NP, 1},
     Description -> "Strong coupling between the dark mesons"
   },
-  (* cRhoPiGauge == {
-    ParameterType-> Internal,
-    Definitions -> {cRhoPiGauge-> (CL/(4 *Pi)) ((2-FermionA) * FermionEpsilon * FermionY^2 * gw * vev^2) / (Sqrt[NDark] * FermionA * FermionEta^3 * PionMass)},
-    InteractionOrder -> {NP, 1},
-    Description -> "Dark Pion coupling to dark rho and gauge boson"
-  },
-  cRhoPiHiggs == {
-    ParameterType-> Internal,
-    Definitions ->  {cRhoPiHiggs-> (CL/(4 *Pi)) (2 * FermionEpsilon * FermionY^2 * vev)/(Sqrt[NDark] * FermionA * FermionEta^3 * PionMass) * (1-FermionA/2 + MH^2/PionMass^2)} ,
-    InteractionOrder -> {NP, 1},
-    Description -> "Dark Pion coupling to dark rho and Higgs boson"
-  }, *)
   cKineticMixing == {
     ParameterType -> Internal,
     Definitions -> {cKineticMixing -> Sqrt[NDark]/(4*Pi) * gw},
@@ -265,14 +253,6 @@ LDarkRhoKinetic := Block[{mu,nu, i}, ExpandIndices[- 1/4 (del[Rhoi[nu,i],mu]-del
                         ];
 
 LRhoDPDP := Block[{mu, a, b, c},ExpandIndices[cRhoPiPi * (Rhoi[mu,a] * DPi[b] del[DPi[c],mu] Eps[a,b,c])]];
-
-(* LRhoDPGauge := Block[{mu, a, b, c},
-                     cRhoPiGauge * 2 * ExpandIndices[Rhoi[mu, a] * DPi[b] * Wi[mu, c] * Eps[a, b, c]]
-                    ]; *)
-
-(* LRhoDPHiggs := Block[{mu, a},
-ExpandIndices[cRhoPiHiggs * ExpandIndices[(Rhoi[mu, a]*DPi[a]*del[H, mu] - Rhoi[mu, a]*del[DPi[a], mu]*H)]]
-]; *)
 
 LKineticMixing := Block[{mu, a, b, c},
 ExpandIndices[gw cKineticMixing (LLbar.ProjM[mu].Ta[a].LL Rhoi[mu,a] +  QLbar.ProjM[mu].Ta[a].QL Rhoi[mu,a] )
