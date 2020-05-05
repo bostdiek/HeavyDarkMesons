@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.24
-# Mathematica version: 10.3.0 for Mac OS X x86 (64-bit) (October 9, 2015)
-# Date: Mon 15 Oct 2018 10:00:30
+# Mathematica version: 12.0.0 for Mac OS X x86 (64-bit) (April 7, 2019)
+# Date: Tue 5 May 2020 11:28:40
 
 
 from __future__ import division
@@ -411,7 +411,7 @@ DP__plus__ = Particle(pdg_code = 9000006,
                       charge = 1,
                       GhostNumber = 0,
                       LeptonNumber = 0,
-                      Y = 0)
+                      Y = 1)
 
 DP__minus__ = DP__plus__.anti()
 

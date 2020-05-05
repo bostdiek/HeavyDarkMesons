@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.24
-# Mathematica version: 10.3.0 for Mac OS X x86 (64-bit) (October 9, 2015)
-# Date: Mon 15 Oct 2018 10:00:31
+# Mathematica version: 12.0.0 for Mac OS X x86 (64-bit) (April 7, 2019)
+# Date: Tue 5 May 2020 11:28:40
 
 
 from object_library import all_decays, Decay
@@ -139,6 +139,7 @@ Decay_Z = Decay(name = 'Decay_Z',
                                   (P.c,P.c__tilde__):'((-11*ee**2*MC**2 - ee**2*MZ**2 - (3*cw**2*ee**2*MC**2)/(2.*sw**2) + (3*cw**2*ee**2*MZ**2)/(2.*sw**2) + (7*ee**2*MC**2*sw**2)/(6.*cw**2) + (17*ee**2*MZ**2*sw**2)/(6.*cw**2))*cmath.sqrt(-4*MC**2*MZ**2 + MZ**4))/(48.*cmath.pi*abs(MZ)**3)',
                                   (P.d,P.d__tilde__):'((-7*ee**2*MD**2 + ee**2*MZ**2 - (3*cw**2*ee**2*MD**2)/(2.*sw**2) + (3*cw**2*ee**2*MZ**2)/(2.*sw**2) - (17*ee**2*MD**2*sw**2)/(6.*cw**2) + (5*ee**2*MZ**2*sw**2)/(6.*cw**2))*cmath.sqrt(-4*MD**2*MZ**2 + MZ**4))/(48.*cmath.pi*abs(MZ)**3)',
                                   (P.DP0,P.H):'(((-2*MDP**2*MW**2*Xi**2)/(cw**2*VPi**2) - (2*MH**2*MW**2*Xi**2)/(cw**2*VPi**2) + (MDP**4*MW**2*Xi**2)/(cw**2*MZ**2*VPi**2) - (2*MDP**2*MH**2*MW**2*Xi**2)/(cw**2*MZ**2*VPi**2) + (MH**4*MW**2*Xi**2)/(cw**2*MZ**2*VPi**2) + (MW**2*MZ**2*Xi**2)/(cw**2*VPi**2))*cmath.sqrt(MDP**4 - 2*MDP**2*MH**2 + MH**4 - 2*MDP**2*MZ**2 - 2*MH**2*MZ**2 + MZ**4))/(48.*cmath.pi*abs(MZ)**3)',
+                                  (P.DP__minus__,P.DP__plus__):'(((-4*ee**2*MDPc**2*sw**2)/cw**2 + (ee**2*MZ**2*sw**2)/cw**2)*cmath.sqrt(-4*MDPc**2*MZ**2 + MZ**4))/(48.*cmath.pi*abs(MZ)**3)',
                                   (P.e__minus__,P.e__plus__):'((-5*ee**2*Me**2 - ee**2*MZ**2 - (cw**2*ee**2*Me**2)/(2.*sw**2) + (cw**2*ee**2*MZ**2)/(2.*sw**2) + (7*ee**2*Me**2*sw**2)/(2.*cw**2) + (5*ee**2*MZ**2*sw**2)/(2.*cw**2))*cmath.sqrt(-4*Me**2*MZ**2 + MZ**4))/(48.*cmath.pi*abs(MZ)**3)',
                                   (P.mu__minus__,P.mu__plus__):'((-5*ee**2*MMU**2 - ee**2*MZ**2 - (cw**2*ee**2*MMU**2)/(2.*sw**2) + (cw**2*ee**2*MZ**2)/(2.*sw**2) + (7*ee**2*MMU**2*sw**2)/(2.*cw**2) + (5*ee**2*MZ**2*sw**2)/(2.*cw**2))*cmath.sqrt(-4*MMU**2*MZ**2 + MZ**4))/(48.*cmath.pi*abs(MZ)**3)',
                                   (P.s,P.s__tilde__):'((-7*ee**2*MS**2 + ee**2*MZ**2 - (3*cw**2*ee**2*MS**2)/(2.*sw**2) + (3*cw**2*ee**2*MZ**2)/(2.*sw**2) - (17*ee**2*MS**2*sw**2)/(6.*cw**2) + (5*ee**2*MZ**2*sw**2)/(6.*cw**2))*cmath.sqrt(-4*MS**2*MZ**2 + MZ**4))/(48.*cmath.pi*abs(MZ)**3)',

@@ -57,7 +57,7 @@ M$ClassesDescription = {
     SelfConjugate -> False,
     Mass -> {MDPc, Internal},
     Width -> {WDP, 5},
-    QuantumNumbers -> {Q -> 1},
+    QuantumNumbers -> {Q -> 1, Y->1},
     ParticleName -> "DP+",
     AntiParticleName -> "DP-"
     },
@@ -199,7 +199,7 @@ M$Parameters = {
 (* New Lagrangian interaction terms *)
 
 (*Dark Pions without Rhos*)
-LDPKin = del[DPbar, mu] del[DP,mu] - MDPc^2 DP DPbar + 1/2 del[DP0, mu] del[DP0, mu] - 1/2 MDP^2 DP0 DP0;
+LDPKin = DC[DPbar, mu] DC[DP,mu] - MDPc^2 DP DPbar + 1/2 DC[DP0, mu] DC[DP0, mu] - 1/2 MDP^2 DP0 DP0;
 
 LDPQuark := Block[{s, f, r, tmp},
                   tmp = cPiFermion * ((DP*uqbar[s, f, a].(msbarDownQuark[f] ProjP[s,r] - msbarUpQuark[f] ProjM[s,r]).dq[r, f, a]) +
