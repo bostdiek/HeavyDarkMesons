@@ -1,5 +1,6 @@
 # Heavy Dark Mesons
-[https://arxiv.org/abs/1809.10184](https://arxiv.org/abs/1809.10184)
+“Dark Mesons at the LHC,” [JHEP, 1907, 133 (2019) doi:10.1007/JHEP07(2019)133](https://link.springer.com/article/10.1007/JHEP07(2019)133) [[arXiv:1809.10184 [hep-ph]]](https://arxiv.org/abs/1809.10184).
+
 
  - Graham D. Kribs
  - Adam Martin
@@ -29,4 +30,21 @@ set NDark 4
 update dependent
 compute_widths rho0 rho+ --body_decay=2
 compute_widths dp0 dp+ --body_decay=3
+```
+
+# Citations
+Please cite as
+```
+@article{Kribs:2018ilo,
+    author = "Kribs, Graham D. and Martin, Adam and Ostdiek, Bryan and Tong, Tom",
+    title = "{Dark Mesons at the LHC}",
+    eprint = "1809.10184",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    doi = "10.1007/JHEP07(2019)133",
+    journal = "JHEP",
+    volume = "07",
+    pages = "133",
+    year = "2019"
+}
 ```
